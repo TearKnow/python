@@ -33,7 +33,8 @@ class ModelMetaclass(type):
 
 class Model(dict):
 	__metaclass__ = ModelMetaclass
-
+	testself = 'when no super function, what will print in self'
+	
 	def __init__(self, **kw):
 		super(Model, self).__init__(**kw)
 		#print(self)
@@ -58,8 +59,8 @@ class Model(dict):
 			params.append('?')
 			args.append(getattr(self, k, None))
 		sql = 'insert into %s (%s) values (%s)' % (self.__table__, ','.join(fields), ','.join(params))
-		#print('SQL: %s' % sql)
-		#print('ARGS: %s' % str(args))
+		print('SQL: %s' % sql)
+		print('ARGS: %s' % str(args))
 
 # testing code:
 
