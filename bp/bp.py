@@ -1,5 +1,6 @@
 import numpy as np
- 
+
+
 # sigmoid function
 def nonlin(x,deriv=False):
     if(deriv==True):
@@ -21,7 +22,7 @@ np.random.seed(1)
  
 # initialize weights randomly with mean 0
 syn0 = 2*np.random.random((3,1)) - 1
- 
+
 for iter in xrange(10000):
     # forward propagation
     l0 = X
