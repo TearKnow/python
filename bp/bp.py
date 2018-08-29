@@ -1,6 +1,5 @@
 import numpy as np
 
-
 # sigmoid function
 def nonlin(x,deriv=False):
     if(deriv==True):
