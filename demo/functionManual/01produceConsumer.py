@@ -17,7 +17,6 @@ def produce(c):
 	while n < 5:
 		n = n + 1
 		print('[producer] producing %s...' % n)
-		#time.sleep(random.randint(1,2))##########################不行 不能交叉显示
 		#一旦生产了东西，通过c.send(n)切换到consumer执行
 		r = c.send(n)
 		print('[producer] consumer return: %s' % r)
